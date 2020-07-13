@@ -10,8 +10,8 @@ class test_lab(models.Model):
     name = fields.Char(string="the new name")
     value = fields.Integer()
     value2 = fields.Float(compute="_value_pc", store=True)
-    description = fields.Text()
-    number = fields.Integer(string="Call me !!")
+    description = fields.Text(default="it this  working ?")
+    number = fields.Integer(string="yup I'm that desprate")
 
     @api.depends('value')
     def _value_pc(self):
